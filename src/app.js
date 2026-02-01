@@ -26,4 +26,15 @@ app.get("/notes",(req,res)=>{
 })
 
 
+app.delete("/notes/:index", (req,res)=>{
+    delete notes [req.params.index]
+
+    res.send["notes deleted successfull"]
+})
+
+app.patch("/notes/:index", (req ,res) =>{
+    notes[ req.params.index ] , des = req .body.des
+    req.send("notes update")
+})
+
 module.exports = app 
