@@ -24,6 +24,17 @@ app.get("/notes",(req,res)=>{
  })
 })
 
+/* DETELE /notes/:index */
+app.delete("/notes/:index" ,(req,res) =>{
+   delete notes [req.params.index]
+
+   res.status(204).json({
+      massage:"notes deleted"
+   })
+
+   
+})
+
 
 
 
