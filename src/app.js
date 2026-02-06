@@ -6,5 +6,15 @@ app.use(express.json())
 
 const notes= []
 
+/*POST /notes */
+app.post("/notes",(req,res)=>{
+   notes.push(req.body)
+
+   res.status(201).json({
+    message:"notes created"
+   })
+
+})
+
 
 module.exports = app
